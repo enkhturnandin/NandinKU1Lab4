@@ -1,0 +1,44 @@
+body {
+  font-family:Arial;
+  background:#f4f4f4;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  height: 100vh;
+}
+
+.container {
+  background:white;
+
+  padding: 30px;
+
+  border-radius:10px;
+
+  width:300px;
+
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#message {
+  font-weight: bold;
+}
