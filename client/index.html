@@ -1,53 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>auth system nandin ku-1</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✿ nandin auth ✿</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-  <div class="container">
-
-    <h1>authentication system</h1>
-
-    <input
-      type="text"
-      id="username"
-      placeholder="Username"
-    >
-
-    <input
-      type="password"
-      id="password"
-      placeholder="Password"
-    >
-
-    <div class="buttons">
-      <button onclick="registerUser()">
-        Register
-      </button>
-
-      <button onclick="loginUser()">
-        Login
-      </button>
-    </div>
-
-    <p id="message"></p>
-
+  <div class="bg-decor" aria-hidden="true">
+    <span class="flower f1">✿</span>
+    <span class="flower f2">✾</span>
+    <span class="flower f3">❀</span>
+    <span class="flower f4">✿</span>
+    <span class="flower f5">✾</span>
+    <span class="flower f6">❀</span>
+    <span class="star s1">★</span>
+    <span class="star s2">✦</span>
+    <span class="star s3">✧</span>
+    <span class="star s4">★</span>
+    <span class="star s5">✦</span>
+    <span class="heart h1">♡</span>
+    <span class="heart h2">♡</span>
+    <span class="heart h3">♡</span>
+    <span class="dot d1"></span>
+    <span class="dot d2"></span>
+    <span class="dot d3"></span>
+    <span class="dot d4"></span>
+    <span class="dot d5"></span>
   </div>
 
-  <script src="script.js"></script>
+  <div class="char-wrap" aria-hidden="true">
+    <div class="character">
+     
+      <div class="char-head">
+        <div class="ear left-ear"></div>
+        <div class="ear right-ear"></div>
+        <div class="inner-ear left-inner"></div>
+        <div class="inner-ear right-inner"></div>
+        <div class="face">
+          <div class="eye left-eye">
+            <div class="pupil"></div>
+          </div>
+          <div class="eye right-eye">
+            <div class="pupil"></div>
+          </div>
+          <div class="blush left-blush"></div>
+          <div class="blush right-blush"></div>
+          <div class="nose"></div>
+          <div class="bow"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <span class="char-star cs1">✦</span>
+    <span class="char-star cs2">✧</span>
+    <span class="char-star cs3">★</span>
+  </div>
 
+ 
+  <main class="card" id="authCard">
+
+    <div class="card-header">
+      <h1 class="card-title">welcome back!</h1>
+      <p class="card-sub">✿ your cozy corner ✿</p>
+    </div>
+
+   
+    <div class="tabs" role="tablist">
+      <button
+        class="tab active"
+        id="loginTab"
+        role="tab"
+        aria-selected="true"
+        onclick="switchTab('login')"
+      >login</button>
+      <button
+        class="tab"
+        id="registerTab"
+        role="tab"
+        aria-selected="false"
+        onclick="switchTab('register')"
+      >register</button>
+    </div>
+
+    <div class="form-body">
+
+      <div class="input-group">
+        <label for="username" class="input-label">
+          <span class="label-icon">🐾</span> username
+        </label>
+        <input
+          type="text"
+          id="username"
+          class="input-field"
+          placeholder="your username..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="password" class="input-label">
+          <span class="label-icon">🔑</span> password
+        </label>
+        <input
+          type="password"
+          id="password"
+          class="input-field"
+          placeholder="shhh, dont tell anyone..."
+        />
+      </div>
+
+
+      <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
+        <span class="btn-text" id="btnText">login ♡</span>
+        <span class="btn-sparkle">✦</span>
+      </button>
+
+    </div>
+
+    <div class="message-wrap" id="messageWrap" aria-live="polite">
+      <p id="message" class="message"></p>
+    </div>
+
+    <div class="card-footer" aria-hidden="true">
+      <span>🌸</span><span>✿</span><span>🌸</span>
+      <span>✦</span><span>🌸</span><span>✿</span><span>🌸</span>
+    </div>
+
+  </main>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
